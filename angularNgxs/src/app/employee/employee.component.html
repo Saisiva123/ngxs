@@ -1,0 +1,11 @@
+
+<h2>Employee Form</h2>
+<form [formGroup]="empForm">
+  <label> First Name </label>
+  <input formControlName="name" />
+  <label> Age </label>
+  <input formControlName="age" />
+  <button (click)="saveEmpDetails()">SUBMIT</button>
+</form>
+
+<router-outlet></router-outlet>

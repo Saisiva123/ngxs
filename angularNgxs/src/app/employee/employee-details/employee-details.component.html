@@ -1,0 +1,16 @@
+<h2>Employee Details</h2>
+
+<table border="2px">
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empList | async">
+            <td>{{emp.name}}</td>
+            <td>{{emp.age}}</td>
+            <td><button (click)="delEmp(emp.name)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
