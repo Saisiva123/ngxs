@@ -9,12 +9,13 @@ import { EmployeeState } from './employee/store/employee.state';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
-  @Select(EmployeeState.getEmployees)emplist!:Observable<Employee[]>
-  constructor(private store:Store){}
-  ngOnInit()
-  {
-   this.emplist.subscribe(res=>console.log(res))
+  hide!:boolean;
+  @Select(EmployeeState.getEmployees) emplist!: Observable<Employee[]>
+  constructor(private store: Store) { }
+  ngOnInit() {
+    this.hide = false;
+    this.emplist.subscribe(res => console.log(res))
   }
 }

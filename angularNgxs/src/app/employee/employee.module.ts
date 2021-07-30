@@ -5,11 +5,13 @@ import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeComponent } from './employee.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UppercaseEmpPipe } from '../services/uppercase-emp.pipe';
 
 @NgModule({
   declarations: [
     EmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    UppercaseEmpPipe
   ],
   imports: [
     CommonModule,

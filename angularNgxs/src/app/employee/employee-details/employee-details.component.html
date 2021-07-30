@@ -8,7 +8,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let emp of empList | async">
-            <td>{{emp.name}}</td>
+            <td>{{emp.name | uppercaseEmp }}</td>
             <td>{{emp.age}}</td>
             <td><button (click)="delEmp(emp.name)">Delete</button></td>
         </tr>
